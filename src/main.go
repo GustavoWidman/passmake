@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/GustavoWidman/passmake/src/cmd"
+	"passmake/src/cmd"
 )
 
 func main() {

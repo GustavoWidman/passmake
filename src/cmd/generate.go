@@ -6,10 +6,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/GustavoWidman/passmake/src/utils"
+	"passmake/src/utils"
 )
 
-func GenerateCommand() *cobra.Command {
+func generateCommand() *cobra.Command {
 
 	cmd := &cobra.Command{
 		Use:   "passmake",
@@ -67,7 +67,7 @@ Description:
 }
 
 func Execute() {
-	if err := GenerateCommand().Execute(); err != nil {
+	if err := generateCommand().Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
