@@ -9,7 +9,7 @@ url="https://github.com/GustavoWidman/passmake"
 license=('CC0')
 depends=()
 makedepends=('go' 'git')
-options=('!debug')
+options=('!strip' '!debug')
 
 source=("$pkgname::git+$url.git")
 sha256sums=('SKIP')
@@ -17,13 +17,13 @@ sha256sums=('SKIP')
 build() {
     cd "$srcdir/$pkgname"
 
-	go mod tidy
+    go mod tidy
 
-	go build -o "$srcdir/$pkgname/passmake" -ldflags "-s -w" ./src/main.go
+    go build -o "$srcdir/$pkgname/passmake" -ldflags "-s -w" ./src/main.go
 
-	rm -f go.mod go.sum
+    rm -f go.mod go.sum
 }
 
 package() {
-	install -Dm755 "$srcdir/$pkgname/passmake" "$pkgdir/usr/bin/passmake"
+    install -Dm755 "$srcdir/$pkgname/passmake" "$pkgdir/usr/bin/passmake"
 }
