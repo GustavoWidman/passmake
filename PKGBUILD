@@ -8,7 +8,7 @@ arch=('any')
 url="https://github.com/GustavoWidman/passmake"
 license=('CC0')
 depends=()
-makedepends=('go', 'git')
+makedepends=('go' 'git')
 
 source=("$pkgname::git+$url.git")
 sha256sums=('SKIP')

@@ -6,13 +6,13 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/GustavoWidman/passmaker/src/utils"
+	"github.com/GustavoWidman/passmake/src/utils"
 )
 
 func GenerateCommand() *cobra.Command {
 
 	cmd := &cobra.Command{
-		Use:   "passmaker",
+		Use:   "passmake",
 		Short: "A simple password generator",
 		Long: `Generate a random password
 

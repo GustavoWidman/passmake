@@ -1,4 +1,4 @@
-module github.com/GustavoWidman/passmaker
+module github.com/GustavoWidman/passmake
 
 go 1.22.3
 
